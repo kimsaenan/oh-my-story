@@ -1,0 +1,331 @@
+{
+ "_meta": {
+  "source": "Oh! My Speaking 6 Unit 01 교재 음원 (Track 01~09)",
+  "method": "무음 구간으로 자르고 TG 스크립트 순서로 대사 ID에 연결 (원음 그대로, AI 가공 없음)",
+  "review": "자동 분할 결과 — 서비스 전 사람이 들어보고 확인 필요",
+  "not_used_in_step5": [
+   "Track_07",
+   "Track_08",
+   "Track_09 (Listen and Check — 교재 Step 4 평가용)"
+  ]
+ },
+ "dialogue": {
+  "id": "dialogue.unit01",
+  "file": "tracks/Track_01.mp3",
+  "text": "Jack: I like summer best. I love summer vacations! / Amy: Me, too. / Amy: What do you like doing in the summer? / Jack: I enjoy swimming. I like swimming best. / Amy: How about surfing? / Jack: Oh, surfing is fun! / Amy: Great! Let's go surfing together! / Jack: Oh no! I enjoy watching surfing."
+ },
+ "clips": {
+  "word.swimming": {
+   "file": "clips/word.swimming.mp3",
+   "text": "swimming",
+   "kind": "word",
+   "track": "02",
+   "start": 9.1,
+   "end": 10.03
+  },
+  "word.surfing": {
+   "file": "clips/word.surfing.mp3",
+   "text": "surfing",
+   "kind": "word",
+   "track": "02",
+   "start": 13.39,
+   "end": 14.37
+  },
+  "word.sunbathing": {
+   "file": "clips/word.sunbathing.mp3",
+   "text": "sunbathing",
+   "kind": "word",
+   "track": "02",
+   "start": 17.73,
+   "end": 18.92
+  },
+  "word.diving": {
+   "file": "clips/word.diving.mp3",
+   "text": "diving",
+   "kind": "word",
+   "track": "02",
+   "start": 22.25,
+   "end": 23.14
+  },
+  "word.snorkeling": {
+   "file": "clips/word.snorkeling.mp3",
+   "text": "snorkeling",
+   "kind": "word",
+   "track": "02",
+   "start": 26.48,
+   "end": 27.56
+  },
+  "word.building_sandcastles": {
+   "file": "clips/word.building_sandcastles.mp3",
+   "text": "building sandcastles",
+   "kind": "word",
+   "track": "02",
+   "start": 30.9,
+   "end": 32.76
+  },
+  "word.collecting_seashells": {
+   "file": "clips/word.collecting_seashells.mp3",
+   "text": "collecting seashells",
+   "kind": "word",
+   "track": "02",
+   "start": 36.09,
+   "end": 37.87
+  },
+  "word.playing_beach_volleyball": {
+   "file": "clips/word.playing_beach_volleyball.mp3",
+   "text": "playing beach volleyball",
+   "kind": "word",
+   "track": "02",
+   "start": 41.2,
+   "end": 43.23
+  },
+  "q.summer": {
+   "file": "clips/q.summer.mp3",
+   "text": "What do you like doing in the summer?",
+   "kind": "question",
+   "track": "04",
+   "start": 8.99,
+   "end": 11.59
+  },
+  "enjoy.swimming": {
+   "file": "clips/enjoy.swimming.mp3",
+   "text": "I enjoy swimming.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 22.0,
+   "end": 23.59
+  },
+  "best.swimming": {
+   "file": "clips/best.swimming.mp3",
+   "text": "I like swimming best.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 24.23,
+   "end": 26.05
+  },
+  "enjoy.surfing": {
+   "file": "clips/enjoy.surfing.mp3",
+   "text": "I enjoy surfing.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 31.7,
+   "end": 33.37
+  },
+  "best.surfing": {
+   "file": "clips/best.surfing.mp3",
+   "text": "I like surfing best.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 34.15,
+   "end": 36.08
+  },
+  "enjoy.sunbathing": {
+   "file": "clips/enjoy.sunbathing.mp3",
+   "text": "I enjoy sunbathing.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 41.75,
+   "end": 43.68
+  },
+  "best.sunbathing": {
+   "file": "clips/best.sunbathing.mp3",
+   "text": "I like sunbathing best.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 44.32,
+   "end": 46.39
+  },
+  "enjoy.diving": {
+   "file": "clips/enjoy.diving.mp3",
+   "text": "I enjoy diving.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 52.04,
+   "end": 53.73
+  },
+  "best.diving": {
+   "file": "clips/best.diving.mp3",
+   "text": "I like diving best.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 54.38,
+   "end": 56.31
+  },
+  "enjoy.snorkeling": {
+   "file": "clips/enjoy.snorkeling.mp3",
+   "text": "I enjoy snorkeling.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 61.82,
+   "end": 63.65
+  },
+  "best.snorkeling": {
+   "file": "clips/best.snorkeling.mp3",
+   "text": "I like snorkeling best.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 64.44,
+   "end": 66.51
+  },
+  "enjoy.building_sandcastles": {
+   "file": "clips/enjoy.building_sandcastles.mp3",
+   "text": "I enjoy building sandcastles.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 72.17,
+   "end": 74.85
+  },
+  "best.building_sandcastles": {
+   "file": "clips/best.building_sandcastles.mp3",
+   "text": "I like building sandcastles best.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 75.46,
+   "end": 78.22
+  },
+  "enjoy.collecting_seashells": {
+   "file": "clips/enjoy.collecting_seashells.mp3",
+   "text": "I enjoy collecting seashells.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 83.88,
+   "end": 86.49
+  },
+  "best.collecting_seashells": {
+   "file": "clips/best.collecting_seashells.mp3",
+   "text": "I like collecting seashells best.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 87.11,
+   "end": 89.69
+  },
+  "enjoy.playing_beach_volleyball": {
+   "file": "clips/enjoy.playing_beach_volleyball.mp3",
+   "text": "I enjoy playing beach volleyball.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 95.36,
+   "end": 98.08
+  },
+  "best.playing_beach_volleyball": {
+   "file": "clips/best.playing_beach_volleyball.mp3",
+   "text": "I like playing beach volleyball best.",
+   "kind": "pattern",
+   "track": "04",
+   "start": 98.7,
+   "end": 101.54
+  },
+  "q.winter": {
+   "file": "clips/q.winter.mp3",
+   "text": "What do you like doing in the winter?",
+   "kind": "question",
+   "track": "05",
+   "start": 11.77,
+   "end": 14.27
+  },
+  "enjoy.building_snowmen": {
+   "file": "clips/enjoy.building_snowmen.mp3",
+   "text": "I enjoy building snowmen.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 14.87,
+   "end": 16.9
+  },
+  "best.building_snowmen": {
+   "file": "clips/best.building_snowmen.mp3",
+   "text": "I like building snowmen best.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 17.52,
+   "end": 19.82
+  },
+  "enjoy.having_snowball_fights": {
+   "file": "clips/enjoy.having_snowball_fights.mp3",
+   "text": "I enjoy having snowball fights.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 27.46,
+   "end": 29.84
+  },
+  "best.having_snowball_fights": {
+   "file": "clips/best.having_snowball_fights.mp3",
+   "text": "I like having snowball fights best.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 30.47,
+   "end": 33.17
+  },
+  "enjoy.making_snow_angels": {
+   "file": "clips/enjoy.making_snow_angels.mp3",
+   "text": "I enjoy making snow angels.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 40.84,
+   "end": 43.16
+  },
+  "best.making_snow_angels": {
+   "file": "clips/best.making_snow_angels.mp3",
+   "text": "I like making snow angels best.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 43.82,
+   "end": 46.25
+  },
+  "enjoy.skiing": {
+   "file": "clips/enjoy.skiing.mp3",
+   "text": "I enjoy skiing.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 53.96,
+   "end": 55.37
+  },
+  "best.skiing": {
+   "file": "clips/best.skiing.mp3",
+   "text": "I like skiing best.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 56.0,
+   "end": 57.77
+  },
+  "enjoy.snowboarding": {
+   "file": "clips/enjoy.snowboarding.mp3",
+   "text": "I enjoy snowboarding.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 65.5,
+   "end": 67.18
+  },
+  "best.snowboarding": {
+   "file": "clips/best.snowboarding.mp3",
+   "text": "I like snowboarding best.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 67.85,
+   "end": 69.94
+  },
+  "enjoy.ice_skating": {
+   "file": "clips/enjoy.ice_skating.mp3",
+   "text": "I enjoy ice skating.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 77.74,
+   "end": 79.45
+  },
+  "best.ice_skating": {
+   "file": "clips/best.ice_skating.mp3",
+   "text": "I like ice skating best.",
+   "kind": "pattern",
+   "track": "05",
+   "start": 80.06,
+   "end": 82.0
+  },
+  "expr.me_too": {
+   "file": "clips/expr.me_too.mp3",
+   "text": "Me, too.",
+   "kind": "expression",
+   "track": "06",
+   "start": 24.43,
+   "end": 25.56
+  }
+ }
+}

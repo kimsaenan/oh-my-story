@@ -1,0 +1,606 @@
+{
+ "_meta": {
+  "source": "Oh! My Speaking 6 Teacher's Guide (Scope & Sequence p.4-5, Teaching Tips p.6-7, Unit 01 p.9-16), Word List, Flashcards, Worksheet A/B",
+  "book": "Oh! My Speaking 6",
+  "note": "Unit 01만 이야기 씨앗(seeds)·편집자 대사·교재 원음까지 준비. Unit 02~08은 Scope & Sequence 정보만 있고 AI 모드에서 '체험'으로 열림."
+ },
+ "units": [
+  {
+   "id": "b6_u01",
+   "book": 6,
+   "no": 1,
+   "title": "I like swimming best.",
+   "theme": "Seasonal activities",
+   "theme_ko": "계절 활동",
+   "key_patterns": [
+    "I enjoy swimming.",
+    "I like swimming best."
+   ],
+   "vocabulary": [
+    "swimming",
+    "surfing",
+    "sunbathing",
+    "diving",
+    "snorkeling",
+    "building sandcastles",
+    "collecting seashells",
+    "playing beach volleyball",
+    "building snowmen",
+    "having snowball fights",
+    "making snow angels",
+    "skiing",
+    "snowboarding",
+    "ice skating"
+   ],
+   "useful_expressions": [
+    "Let's go surfing together!"
+   ],
+   "useful_questions": [
+    "What do you like doing in the summer?",
+    "How about surfing?"
+   ],
+   "goals": [
+    "Talking about favorite seasonal activities",
+    "Talking about what you like doing",
+    "Emphasizing how much you like doing it"
+   ],
+   "pattern_stems": [
+    "i enjoy",
+    "i like ~ best"
+   ],
+   "vocabulary_ko": {
+    "swimming": "수영하는 것",
+    "surfing": "서핑하는 것",
+    "sunbathing": "일광욕하는 것",
+    "diving": "다이빙하는 것",
+    "snorkeling": "스노클링 하는 것",
+    "building sandcastles": "모래성을 쌓는 것",
+    "collecting seashells": "조개껍데기를 모으는 것",
+    "playing beach volleyball": "비치발리볼을 하는 것",
+    "building snowmen": "눈사람을 만드는 것",
+    "having snowball fights": "눈싸움하는 것",
+    "making snow angels": "스노우 엔젤을 만드는 것",
+    "skiing": "스키를 타는 것",
+    "snowboarding": "스노보드를 타는 것",
+    "ice skating": "스케이트를 타는 것"
+   },
+   "season": {
+    "summer": [
+     "swimming",
+     "surfing",
+     "sunbathing",
+     "diving",
+     "snorkeling",
+     "building sandcastles",
+     "collecting seashells",
+     "playing beach volleyball"
+    ],
+    "winter": [
+     "building snowmen",
+     "having snowball fights",
+     "making snow angels",
+     "skiing",
+     "snowboarding",
+     "ice skating"
+    ]
+   },
+   "scene": "park",
+   "dialogue_audio": "dialogue.unit01",
+   "opening": "Beep! Jack and Amy love summer. Now I want to hear YOUR story! Let's go!",
+   "opening_ko": "삐빅! Jack과 Amy는 여름을 정말 좋아해. 이제 너의 이야기를 듣고 싶어! 출발!",
+   "teaching_tips_source": "Oh! My Speaking 6 Teacher's Guide p.6-7 → prompts/wacky_tutor_system.md 2장 (T1~T7)",
+   "key_expressions": [
+    {
+     "en": "I enjoy ~.",
+     "ko": "나는 ~하는 걸 즐겨.",
+     "audio": "enjoy.swimming"
+    },
+    {
+     "en": "I like ~ best.",
+     "ko": "나는 ~하는 게 제일 좋아.",
+     "audio": "best.swimming"
+    }
+   ],
+   "frame": "I enjoy ___. I like ___ best.",
+   "ko_keywords": {
+    "서핑": "surfing",
+    "수영": "swimming",
+    "일광욕": "sunbathing",
+    "다이빙": "diving",
+    "스노클링": "snorkeling",
+    "모래성": "building sandcastles",
+    "조개": "collecting seashells",
+    "비치발리볼": "playing beach volleyball",
+    "배구": "playing beach volleyball",
+    "눈사람": "building snowmen",
+    "눈싸움": "having snowball fights",
+    "스노우 엔젤": "making snow angels",
+    "눈천사": "making snow angels",
+    "스노보드": "snowboarding",
+    "스키": "skiing",
+    "스케이트": "ice skating"
+   },
+   "seeds": [
+    {
+     "id": "summer",
+     "title": "신나는 여름 방학",
+     "emoji": "🏖️",
+     "desc": "Jack, Amy와 바닷가로! 여름에 뭐 하고 놀까?",
+     "scene": "beach",
+     "opening": {
+      "speaker": "wacky",
+      "en": "Beep! It's summer vacation! Let's go to the beach!",
+      "ko": "삐빅! 여름 방학이야! 바닷가에 가자!"
+     },
+     "pages": [
+      {
+       "q": "What do you like doing in the summer?",
+       "q_ko": "너는 여름에 뭐 하는 걸 좋아해?",
+       "q_audio": "q.summer",
+       "choices": [
+        "I enjoy surfing.",
+        "I like building sandcastles best."
+       ],
+       "speaker": "amy",
+       "scene": "beach",
+       "react": "Wow, you enjoy {w}! I enjoy {w}, too.",
+       "react_ko": "우와, 너는 {ko}을 즐기는구나! 나도 좋아해.",
+       "beat": "Amy and Jack play at the beach. The child's summer activity becomes what they do."
+      },
+      {
+       "q": "Look! Something is in the sand. What is it?",
+       "q_ko": "봐! 모래 속에 뭔가 있어. 뭘까?",
+       "choices": [
+        "It's a seashell.",
+        "It's a treasure map."
+       ],
+       "speaker": "jack",
+       "scene": "beach",
+       "react": "{W}? Wow! Let's look closer.",
+       "react_ko": "{w}? 우와! 더 자세히 보자.",
+       "beat": "They find something in the sand. The child decides what it is."
+      },
+      {
+       "q": "Beep! I want to play with you. What do you like doing best?",
+       "q_ko": "삐빅! 너랑 놀고 싶어. 뭐 하는 게 제일 좋아?",
+       "choices": [
+        "I like swimming best.",
+        "I like playing beach volleyball best."
+       ],
+       "speaker": "wacky",
+       "scene": "",
+       "react": "Beep! I like {w} best, too! {together}",
+       "react_ko": "삐빅! 나도 {ko}이 제일 좋아! 우리 같이 하자!",
+       "beat": "Wacky wants to do the child's favorite thing together. Happy ending of the base story (Let's go ~ together!)."
+      }
+     ]
+    },
+    {
+     "id": "winter",
+     "title": "눈 오는 겨울",
+     "emoji": "⛄",
+     "desc": "하얀 눈이 펑펑! 겨울엔 뭐가 제일 좋아?",
+     "scene": "snow",
+     "opening": {
+      "speaker": "wacky",
+      "en": "Beep! Brrr! It's snowing! Look at the white hill!",
+      "ko": "삐빅! 부르르! 눈이 와! 하얀 언덕을 봐!"
+     },
+     "pages": [
+      {
+       "q": "What do you like doing in the winter?",
+       "q_ko": "너는 겨울에 뭐 하는 걸 좋아해?",
+       "q_audio": "q.winter",
+       "choices": [
+        "I enjoy building snowmen.",
+        "I like skiing best."
+       ],
+       "speaker": "jack",
+       "scene": "snow",
+       "react": "Brrr! You enjoy {w}! I enjoy {w}, too!",
+       "react_ko": "부르르! 너는 {ko}을 즐기는구나! 나도야!",
+       "beat": "Jack and Amy play on the snowy hill. The child's winter activity becomes their game."
+      },
+      {
+       "q": "Oh! The snowman can talk! What does it say?",
+       "q_ko": "어! 눈사람이 말을 해! 뭐라고 할까?",
+       "choices": [
+        "Hello, friends!",
+        "I'm cold!"
+       ],
+       "speaker": "amy",
+       "scene": "snow",
+       "react": "The snowman says, \"{child}\" So funny!",
+       "react_ko": "눈사람이 말해요. \"{child}\" 정말 재밌다!",
+       "beat": "A snowman comes alive. The child decides what it says."
+      },
+      {
+       "q": "What do you like doing best with the snowman?",
+       "q_ko": "눈사람이랑 뭐 하는 게 제일 좋아?",
+       "choices": [
+        "I like having snowball fights best.",
+        "I like ice skating best."
+       ],
+       "speaker": "wacky",
+       "scene": "",
+       "react": "Beep! I like {w} best, too! {together}",
+       "react_ko": "삐빅! 나도 {ko}이 제일 좋아! 우리 같이 하자!",
+       "beat": "Wacky and the snowman want to play the child's favorite game together. Happy ending of the base story."
+      }
+     ]
+    },
+    {
+     "id": "imagine",
+     "title": "내가 만드는 상상 나라",
+     "emoji": "✨",
+     "desc": "바닷속, 하늘 위 어디든! 내가 정하는 이야기",
+     "scene": "park",
+     "opening": {
+      "speaker": "wacky",
+      "en": "Beep! My magic box can take us anywhere!",
+      "ko": "삐빅! 내 마법 상자는 어디든 데려다줄 수 있어!"
+     },
+     "pages": [
+      {
+       "q": "Where do you want to go?",
+       "q_ko": "어디로 가고 싶어?",
+       "choices": [
+        "Under the sea!",
+        "Up in the sky!"
+       ],
+       "speaker": "amy",
+       "scene": "",
+       "react": "{W}! Wow! Let's go!",
+       "react_ko": "{w}! 우와! 가자!",
+       "beat": "The magic box takes them to the place the child chooses."
+      },
+      {
+       "q": "What do you like doing there?",
+       "q_ko": "거기서 뭐 하는 걸 좋아해?",
+       "choices": [
+        "I enjoy swimming with dolphins.",
+        "I like flying with birds best."
+       ],
+       "speaker": "jack",
+       "scene": "",
+       "react": "You enjoy {w}? I enjoy it, too!",
+       "react_ko": "너는 {ko}을 즐기는구나? 나도 좋아!",
+       "beat": "They play in the new place. The child's activity becomes the fun part."
+      },
+      {
+       "q": "Who is your new friend there?",
+       "q_ko": "거기서 만난 새 친구는 누구야?",
+       "choices": [
+        "A little dolphin!",
+        "A big bird!"
+       ],
+       "speaker": "wacky",
+       "scene": "",
+       "react": "Beep! Hello, {w}! I like this story best!",
+       "react_ko": "삐빅! 안녕, {w}! 이 이야기가 제일 좋아!",
+       "beat": "They meet a new friend. Happy ending of the base story."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b6_u02",
+   "book": 6,
+   "no": 2,
+   "title": "Where can I find the restroom?",
+   "theme": "Places and things that you are looking for",
+   "theme_ko": "찾는 장소와 물건",
+   "key_patterns": [
+    "Where can I find the restroom?",
+    "I'm looking for a charging station."
+   ],
+   "vocabulary": [
+    "the restroom",
+    "a convenience store",
+    "a gift shop",
+    "a pharmacy",
+    "an elevator",
+    "a cafe",
+    "a fast food restaurant",
+    "the information center",
+    "the lost-and-found center",
+    "a hammock",
+    "a sun chair",
+    "a beach umbrella",
+    "the boardwalk",
+    "the lighthouse",
+    "a palm tree"
+   ],
+   "useful_expressions": [
+    "My battery is low!",
+    "I'm here."
+   ],
+   "useful_questions": [
+    "Where are you?"
+   ],
+   "goals": [
+    "Talking about places",
+    "Talking about what you are looking for"
+   ],
+   "turns": []
+  },
+  {
+   "id": "b6_u03",
+   "book": 6,
+   "no": 3,
+   "title": "How much is this?",
+   "theme": "Prices",
+   "theme_ko": "가격",
+   "key_patterns": [
+    "How much is this/that drone?",
+    "It's $100.",
+    "It's $40 for one and $70 for two."
+   ],
+   "vocabulary": [
+    "drone",
+    "cell phone",
+    "mini fan",
+    "wireless mic",
+    "laptop",
+    "selfie stick",
+    "sixty",
+    "seventy",
+    "eighty",
+    "ninety",
+    "hundred",
+    "birthday card",
+    "balloon",
+    "candle",
+    "banner",
+    "mask",
+    "water gun"
+   ],
+   "useful_expressions": [
+    "It's too expensive!"
+   ],
+   "useful_questions": [
+    "Can you help me find a good one?"
+   ],
+   "goals": [
+    "Talking about prices",
+    "Learning numbers sixty to a hundred",
+    "Understanding sales terms"
+   ],
+   "turns": []
+  },
+  {
+   "id": "b6_u04",
+   "book": 6,
+   "no": 4,
+   "title": "How about playing table tennis?",
+   "theme": "Suggestion",
+   "theme_ko": "제안하기",
+   "key_patterns": [
+    "How about playing table tennis?",
+    "It's on the second floor."
+   ],
+   "vocabulary": [
+    "playing table tennis",
+    "going to the theater",
+    "having a burger",
+    "going shopping",
+    "buying a present",
+    "sports center",
+    "theater",
+    "fast food restaurant",
+    "clothing store",
+    "toy shop",
+    "learning baking",
+    "having Chinese food",
+    "reading books",
+    "buying shoes",
+    "kids baking school",
+    "Chinese restaurant",
+    "library",
+    "shoe store",
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth",
+    "seventh",
+    "eighth",
+    "ninth"
+   ],
+   "useful_expressions": [
+    "Sounds good.",
+    "See you there at 12."
+   ],
+   "useful_questions": [
+    "Where do you want to meet?",
+    "Where is it?"
+   ],
+   "goals": [
+    "Making a suggestion",
+    "Making a plan to meet a friend",
+    "Using ordinal numbers"
+   ],
+   "turns": []
+  },
+  {
+   "id": "b6_u05",
+   "book": 6,
+   "no": 5,
+   "title": "Can I bring my dog?",
+   "theme": "Inviting",
+   "theme_ko": "초대하기",
+   "key_patterns": [
+    "Can you come to my birthday party?",
+    "Can I bring my dog?"
+   ],
+   "vocabulary": [
+    "my birthday party",
+    "my house",
+    "the concert",
+    "the picnic",
+    "the play",
+    "dog",
+    "friend",
+    "little brother",
+    "camera",
+    "hat",
+    "the school festival",
+    "the amusement park",
+    "the talent show",
+    "the baseball game"
+   ],
+   "useful_expressions": [
+    "Hold on.",
+    "Let me ask my mom."
+   ],
+   "useful_questions": [
+    "Can Jack bring his dog?"
+   ],
+   "goals": [
+    "Inviting someone to certain events",
+    "Asking for permission with \"can\""
+   ],
+   "turns": []
+  },
+  {
+   "id": "b6_u06",
+   "book": 6,
+   "no": 6,
+   "title": "You must be quiet in here.",
+   "theme": "Warnings",
+   "theme_ko": "주의하기",
+   "key_patterns": [
+    "You must be quiet in here.",
+    "You must not shout in here."
+   ],
+   "vocabulary": [
+    "be quiet",
+    "be on time",
+    "be careful",
+    "be polite",
+    "stop at the red light",
+    "wait in line",
+    "get enough sleep",
+    "shout",
+    "be late",
+    "run around",
+    "be rude",
+    "cross the street at the red light",
+    "cut in line",
+    "stay up late"
+   ],
+   "useful_expressions": [
+    "I can't hear you!"
+   ],
+   "useful_questions": [
+    "Pardon?",
+    "What did you say?"
+   ],
+   "goals": [
+    "Talking about obligations and restrictions",
+    "Giving warnings"
+   ],
+   "turns": []
+  },
+  {
+   "id": "b6_u07",
+   "book": 6,
+   "no": 7,
+   "title": "A coat is warmer than a jacket.",
+   "theme": "Taking a trip",
+   "theme_ko": "여행",
+   "key_patterns": [
+    "A coat is warmer than a jacket.",
+    "A car is more comfortable than a train."
+   ],
+   "vocabulary": [
+    "a jacket",
+    "a coat",
+    "warmer",
+    "a hill",
+    "a mountain",
+    "higher",
+    "bigger",
+    "silver",
+    "gold",
+    "more expensive",
+    "a car",
+    "a train",
+    "faster",
+    "more comfortable",
+    "a river",
+    "a lake",
+    "smaller",
+    "a rock",
+    "a feather",
+    "lighter",
+    "a bear",
+    "an elephant",
+    "heavier",
+    "English",
+    "math",
+    "more difficult"
+   ],
+   "useful_expressions": [
+    "Put on a coat.",
+    "Slow down! Chew it well."
+   ],
+   "useful_questions": [
+    "Is that a hill or a mountain?"
+   ],
+   "goals": [
+    "Comparing two things",
+    "Learning comparative forms"
+   ],
+   "turns": []
+  },
+  {
+   "id": "b6_u08",
+   "book": 6,
+   "no": 8,
+   "title": "She's the tallest member.",
+   "theme": "Favorite singing group",
+   "theme_ko": "좋아하는 그룹",
+   "key_patterns": [
+    "She's the tallest member.",
+    "(I think) he's the most handsome member."
+   ],
+   "vocabulary": [
+    "the tallest",
+    "the oldest",
+    "the youngest",
+    "the strongest",
+    "the funniest",
+    "the most popular",
+    "singer",
+    "the lightest",
+    "the heaviest",
+    "the longest",
+    "the most interesting",
+    "woman",
+    "man",
+    "child",
+    "boy",
+    "girl",
+    "bag",
+    "box",
+    "snake",
+    "book"
+   ],
+   "useful_expressions": [
+    "I didn't know that."
+   ],
+   "useful_questions": [
+    "Are they singers?",
+    "Who's the most handsome member?"
+   ],
+   "goals": [
+    "Making sentences using comparative/superlative adjectives",
+    "Expressing your own opinions"
+   ],
+   "turns": []
+  }
+ ]
+}

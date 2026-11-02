@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Oh! My Story 서비스 구조</title>
+<style>
+:root{--ink:#1E2A4A;--muted:#5A6680;--line:#D9E2EE;--violet:#6A4BD6;--violet-soft:#EFEAFF;--sun:#FFC93C;--orange:#E06020;--orange-soft:#FFF1E6;--green:#1E9455;--green-soft:#E3F5EA;--blue:#1F7FD6;--blue-soft:#E6F1FC;--pink:#E8508A;--pink-soft:#FDEAF2;--gray:#F2F4F8}
+*{box-sizing:border-box}
+body{margin:0;width:1920px;height:1080px;background:#FFFFFF;font-family:"Noto Sans CJK KR","Noto Sans KR",sans-serif;color:var(--ink);position:relative;overflow:hidden}
+.abs{position:absolute}
+h1{position:absolute;left:56px;top:34px;margin:0;font-size:44px;font-weight:700;letter-spacing:-.5px}
+h1 span{color:var(--violet)}
+.sub{position:absolute;left:58px;top:98px;font-size:20px;color:var(--muted)}
+.panel{position:absolute;border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.ptitle{font-size:21px;font-weight:700;display:flex;align-items:center;gap:8px}
+.ptitle small{font-size:15px;font-weight:500;color:var(--muted)}
+.file{background:#FFFFFF;border:2px solid var(--line);border-radius:14px;padding:10px 14px;display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center}
+.ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff}
+.file b{display:block;font-size:17px}
+.file span{font-size:14px;color:var(--muted)}
+.box{position:absolute;border-radius:20px;padding:16px 18px;border:3px solid;background:#fff;display:flex;flex-direction:column;gap:6px}
+.box b{font-size:21px}
+.box span{font-size:15px;color:var(--muted);line-height:1.4}
+.chip{border-radius:14px;padding:10px 14px;font-size:17px;font-weight:700;display:flex;flex-direction:column;gap:2px}
+.chip small{font-size:14px;font-weight:500;color:var(--muted)}
+.lbl{position:absolute;font-size:15px;font-weight:700;color:var(--muted);background:#fff;padding:2px 8px;border-radius:8px;white-space:nowrap}
+.tag{display:inline-block;font-size:13px;font-weight:700;border-radius:99px;padding:2px 10px}
+.step{border-radius:16px;padding:12px 16px;display:flex;flex-direction:column;gap:3px}
+.step b{font-size:19px}
+.step span{font-size:14px;color:var(--muted)}
+.flowrow{display:flex;align-items:center;gap:14px}
+.fnode{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:16px;font-weight:700;display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+.fnode small{font-size:13px;font-weight:500;color:var(--muted)}
+.arrow{font-size:22px;color:#9AA6BC;font-weight:700}
+svg{position:absolute;inset:0;pointer-events:none}
+</style>
+</head>
+<body>
+<h1><span>Oh! My Story</span> 서비스 구조와 데이터 흐름</h1>
+<div class="sub">아이가 말하면 → 듣고(STT) → 교재를 찾아보고(RAG) → 반응을 만들고(LLM) → 말해준다(TTS)</div>
+
+<!-- A. 교재 데이터 -->
+<div class="panel" style="left:40px;top:150px;width:340px;height:670px;background:var(--gray)">
+  <div class="ptitle">쎄듀 교재 데이터 <small>Oh! My Speaking</small></div>
+  <div class="file"><div class="ic" style="background:#D9534F">PDF</div><div><b>TG 교사용 지침서</b><span>발문·지도 가이드</span></div></div>
+  <div class="file"><div class="ic" style="background:var(--blue)">단어</div><div><b>Word List</b><span>단원 어휘 · 스티커 목록</span></div></div>
+  <div class="file"><div class="ic" style="background:var(--orange)">카드</div><div><b>플래시카드 · PPT</b><span>그림 · 예문</span></div></div>
+  <div class="file"><div class="ic" style="background:var(--green)">예문</div><div><b>Worksheet</b><span>추가 예문</span></div></div>
+  <div class="file"><div class="ic" style="background:#7A869E">정답</div><div><b>Answer Key</b><span>패턴 판정 기준</span></div></div>
+  <div class="file"><div class="ic" style="background:var(--violet)">MP3</div><div><b>교재 음원 (MP3)</b><span>단어 발음 · 패턴 모범 문장</span></div></div>
+</div>
+
+<!-- B. 정리·지식베이스 -->
+<div class="box" style="left:450px;top:300px;width:230px;height:130px;border-color:#9AA6BC">
+  <b>정리 · 임베딩</b><span>단원별로 나누고<br>패턴·어휘·발문 태그</span>
+</div>
+<div class="box" style="left:450px;top:500px;width:230px;height:190px;border-color:var(--blue);background:var(--blue-soft)">
+  <b>교재 지식베이스</b><span>Unit ID로 먼저 거르고<br>그 안에서 벡터 검색<br><br>현재 단원 + 배운 단원</span>
+</div>
+
+<!-- C. Wacky 대화 엔진 -->
+<div class="panel" style="left:780px;top:190px;width:420px;height:590px;background:var(--violet-soft);border:3px solid var(--violet)">
+  <div class="ptitle" style="color:#4A31A8">Wacky 대화 엔진</div>
+  <div class="chip" style="background:#fff">① 교재 조회 (RAG)<small>지금 단원 패턴 · 어휘 · TG 발문</small></div>
+  <div class="chip" style="background:#fff">② 반응 · 이야기 생성 (LLM)<small>아이 상상을 넣어 캐릭터 대사 만들기</small></div>
+  <div class="chip" style="background:#fff">③ 패턴 판정 · 바른 문장<small>틀려도 지적 없이 바른 문장으로 다시 들려주기</small></div>
+  <div class="chip" style="background:#fff">④ 아동 안전 필터<small>부적절한 상상은 다정한 내용으로</small></div>
+  <div class="chip" style="background:var(--sun);color:#3A2A00">품질 지표<small style="color:#5A4000">핵심 패턴 포함률 · 교재 밖 단어 비율</small></div>
+</div>
+
+<!-- D. STT / TTS -->
+<div class="box" style="left:1280px;top:250px;width:210px;height:110px;border-color:var(--orange);background:var(--orange-soft)">
+  <b>STT 음성 인식</b><span>아이 말 → 글자<br>단원 어휘를 힌트로</span>
+</div>
+<div class="box" style="left:1280px;top:470px;width:210px;height:120px;border-color:var(--orange);background:var(--orange-soft)">
+  <b>TTS 음성 합성</b><span>AI 대사 → 소리<br>교재 문장은 교재 MP3</span>
+</div>
+
+<!-- E. 앱 -->
+<div class="panel" style="left:1560px;top:150px;width:330px;height:670px;background:var(--gray)">
+  <div class="ptitle">아이 앱 흐름</div>
+  <div class="step" style="background:#fff;border:2px dashed #B8C2D4"><b style="color:var(--muted)">Step 1~4 · 교재</b><span>교재 + 세이펜·QR (기존 MP3)<br>단원 끝 QR → Step 5 열기</span></div>
+  <div class="step" style="background:var(--violet);color:#fff"><b>Step 5 · Oh! My Story</b><span style="color:#E8E2FF">아이가 패턴으로 말하면<br>말한 대로 이야기가 이어짐</span></div>
+  <div class="step" style="background:#fff;border:2px solid var(--line)"><b>장면 · 스티커 조합</b><span>미리 만든 배경·스티커 사용<br>없는 상상은 '마법 상자'</span></div>
+  <div class="step" style="background:#fff;border:2px solid var(--line)"><b>스토리 카드</b><span>아이 문장 + 장면 + 별 보상</span></div>
+</div>
+
+<!-- F. 공유·피드백 -->
+<div class="panel" style="left:40px;top:860px;width:1850px;height:190px;background:#FFFAF0;border:2px solid #F1E2B8;flex-direction:row;align-items:center;gap:28px;padding:20px 28px">
+  <div style="display:flex;flex-direction:column;gap:6px;width:190px"><div class="ptitle">공유 · 피드백</div><span style="font-size:14px;color:var(--muted)">결과가 다시 아이에게 돌아오는 고리</span></div>
+  <div class="flowrow">
+    <div class="fnode">스토리 카드<small>완성</small></div><span class="arrow">→</span>
+    <div class="fnode" style="border-color:#E5C800;background:#FFF8C4">부모 공유<small>카카오 알림톡 · QR</small></div><span class="arrow">→</span>
+    <div class="fnode" style="border-color:var(--pink);background:var(--pink-soft)">부모 리포트 (웹)<small>패턴 성공 · 집에서 물어볼 질문</small></div><span class="arrow">→</span>
+    <div class="fnode">칭찬 스탬프<small>아이 앱으로 전달</small></div>
+  </div>
+  <div style="width:2px;align-self:stretch;background:#F1E2B8"></div>
+  <div class="flowrow">
+    <div class="fnode" style="border-color:var(--green);background:var(--green-soft)">학원 선생님<small>단원 이야기 과제 배정</small></div><span class="arrow">→</span>
+    <div class="fnode">결과 대시보드<small>반 전체 · 확인 필요 학생</small></div>
+  </div>
+</div>
+<div class="abs" style="left:1288px;top:640px;width:250px;font-size:14px;color:var(--muted);line-height:1.5">음성 데이터: 보호자 동의 후 이용<br>피드백에만 쓰고 일정 기간 후 삭제</div>
+
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" aria-hidden="true">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8090A8"/></marker>
+    <marker id="v" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4BD6"/></marker>
+    <marker id="o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E06020"/></marker>
+  </defs>
+  <path d="M380 365 L446 365" stroke="#8090A8" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <path d="M565 430 L565 496" stroke="#8090A8" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <path d="M684 595 L776 595" stroke="#6A4BD6" stroke-width="3" fill="none" marker-start="url(#v)" marker-end="url(#v)"/>
+  <path d="M1560 350 L1530 350 L1530 305 L1494 305" stroke="#E06020" stroke-width="3" fill="none" marker-end="url(#o)"/>
+  <path d="M1280 305 L1204 305" stroke="#E06020" stroke-width="3" fill="none" marker-end="url(#o)"/>
+  <path d="M1204 530 L1276 530" stroke="#E06020" stroke-width="3" fill="none" marker-end="url(#o)"/>
+  <path d="M1490 530 L1530 530 L1530 400 L1556 400" stroke="#E06020" stroke-width="3" fill="none" marker-end="url(#o)"/>
+  <path d="M1204 700 L1545 700 L1545 478 L1556 478" stroke="#6A4BD6" stroke-width="3" fill="none" stroke-dasharray="8 6" marker-end="url(#v)"/>
+  <path d="M1725 820 L1725 856" stroke="#8090A8" stroke-width="3" fill="none" marker-end="url(#a)"/>
+</svg>
+<div class="lbl" style="left:686px;top:560px">단원 조회</div>
+<div class="lbl" style="left:1500px;top:262px;background:transparent">아이 음성</div>
+<div class="lbl" style="left:1210px;top:270px">텍스트</div>
+<div class="lbl" style="left:1206px;top:494px">반응 문장</div>
+<div class="lbl" style="left:1440px;top:597px;background:transparent;display:none"></div>
+<div class="lbl" style="left:1300px;top:706px">장면 · 스티커 선택</div>
+</body>
+</html>
